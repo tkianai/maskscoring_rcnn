@@ -7,14 +7,14 @@ import os
 class DatasetCatalog(object):
     DATA_DIR = "datasets"
     DATASETS = {
-        "icdar_lsvt_train_cocostyle": {
+        "icdar_lsvt_train_cocostyle": (
             "img_dir": "ICDAR2019/LSVT/train_full_images",
             "ann_file": "ICDAR2019/LSVT/lsvt_train.json"
-        },
-        "icdar_lsvt_val_cocostyle": {
+        ),
+        "icdar_lsvt_val_cocostyle": (
             "img_dir": "ICDAR2019/LSVT/train_full_images",
             "ann_file": "ICDAR2019/LSVT/lsvt_val.json"
-        },
+        ),
         "coco_2014_train": (
             "coco/train2014",
             "coco/annotations/instances_train2014.json",
