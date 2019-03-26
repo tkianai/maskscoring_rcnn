@@ -3,8 +3,8 @@ MODEL:
   WEIGHT: "output_dir/pretrained/X-152-COCO-for-icdar.pth"
   BACKBONE:
     CONV_BODY: "R-152-FPN"
+    OUT_CHANNELS: 256
   RESNETS:
-    BACKBONE_OUT_CHANNELS: 256
     STRIDE_IN_1X1: False
     NUM_GROUPS: 32
     WIDTH_PER_GROUP: 8
