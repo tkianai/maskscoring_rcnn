@@ -48,13 +48,13 @@ def do_train(
 
     if is_main_process():
         writer = None
-    try:
-        from tensorboardX import SummaryWriter
-        v_log_dir = checkpointer.save_dir + ('log' if checkpointer.save_dir.endswith('/') else '/log')
-        writer = SummaryWriter(v_log_dir)
-        print("tensorboardX was imported!")
-    except:
-        print("visualization failed! Error occured when importing tensorboardX!")
+        try:
+            from tensorboardX import SummaryWriter
+            v_log_dir = checkpointer.save_dir + ('log' if checkpointer.save_dir.endswith('/') else '/log')
+            writer = SummaryWriter(v_log_dir)
+            print("tensorboardX was imported!")
+        except:
+            print("visualization failed! Error occured when importing tensorboardX!")
 
     logger = logging.getLogger("maskrcnn_benchmark.trainer")
     logger.info("Start training")
